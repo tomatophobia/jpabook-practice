@@ -8,10 +8,15 @@ import javax.persistence.Table
 
 @Entity
 @Table(name = "member")
-class Member {
+class Member() {
+
+    constructor(id: String, username: String, age: Int) : this() {
+        this.id = id
+        this.username = username
+        this.age = age
+    }
 
     @Id
-    @Column(name = "id")
     var id: String? = null
 
     @Column(name = "name")
