@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.utils.addToStdlib.cast
-
 plugins {
     kotlin("jvm") version Versions.kotlin
     kotlin("plugin.spring") version Versions.kotlin
