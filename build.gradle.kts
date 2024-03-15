@@ -19,10 +19,10 @@ allOpen {
 
 sourceSets {
     main {
-        output.setResourcesDir(kotlin.classesDirectory)
+        output.setResourcesDir(kotlin.classesDirectory) // persistence.xml 리소스 파일 빌드 위치 변경
+        kotlin.exclude("jpabook/start/pr1/**") // 엔티티 이름 충돌 방지를 위해 빌드 타겟에서 제외
     }
 }
-
 
 dependencies {
     implementation("com.mysql:mysql-connector-j:${Versions.mysql}")
