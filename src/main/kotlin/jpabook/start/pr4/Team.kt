@@ -5,13 +5,14 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "team")
+//@Access(AccessType.FIELD)
 class Team(
-    @get:Id
-    @get:Column(name = "team_id")
+    @Id
+    @Column(name = "team_id")
     val id: String,
 
     val name: String,
 
-    @get:OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
     val members: MutableList<Member> = mutableListOf()
 )
