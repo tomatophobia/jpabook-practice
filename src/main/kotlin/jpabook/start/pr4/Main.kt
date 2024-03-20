@@ -18,7 +18,8 @@ import javax.persistence.PersistenceUnitUtil
 fun logic(em: EntityManager, puu: PersistenceUnitUtil) {
     val member = em.find(Member::class.java, "member1")
     println(puu.isLoaded(member.team))
-//    println(member.team?.finalGetName())
+    member.team?.finalSetName("abc")
+    println(member.team?.finalGetName())
 //    member.team?.finalSetName("hello")
     println(member.team?.name)
 //    println(member.team?.name)

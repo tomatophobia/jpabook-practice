@@ -28,6 +28,10 @@ sourceSets {
     }
 }
 
+tasks.compileJava {
+    dependsOn("processResources")
+}
+
 dependencies {
     implementation("com.mysql:mysql-connector-j:${Versions.mysql}")
     implementation("org.hibernate:hibernate-entitymanager:${Versions.hibernate}")
